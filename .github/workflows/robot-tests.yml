@@ -26,7 +26,11 @@ jobs:
           pip install robotframework
           pip install robotframework-seleniumlibrary
           pip install selenium webdriver-manager
-
+          
+      - name: Start application
+        run: |
+          nohup flask run --host=0.0.0.0 --port=5000 &
+          
       - name: Run Robot Framework tests
         run: |
           python robot_run.py
