@@ -8,7 +8,7 @@ Adicionar Fornecedor
     Click Link    xpath=//a[contains(text(),"Adicionar Fornecedor")]
     Input Text    id=name    Fornecedor Teste
     Click Button    xpath=//button[@type="submit" and contains(text(),"Salvar")]
-    Page Should Contain    Fornecedor Teste
+    Wait Until Page Contains    Fornecedor Teste    timeout=5s
 
 Editar Fornecedor
     Click Link    xpath=//tr[td[contains(text(),"Fornecedor Teste")]]//a[contains(text(),"Editar")]
