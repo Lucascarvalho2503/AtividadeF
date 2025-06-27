@@ -14,7 +14,7 @@
         <div class="mb-3">
             <label for="supplier_id" class="form-label">Fornecedor</label>
             <select class="form-select" id="supplier_id" name="supplier_id" required>
-                <option value="">Selecion um fornecedor</option>
+                <option value="">Selecione um fornecedor</option>
                 {% for supplier in suppliers %}
                     <option value="{{ supplier.id }}">{{ supplier.name }}</option>
                 {% endfor %}
