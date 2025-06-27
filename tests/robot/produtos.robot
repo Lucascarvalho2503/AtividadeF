@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 Suite Setup    Open Browser    http://localhost:5000/products    chrome    options=${CHROME_OPTIONS}
 Suite Teardown    Close Browser
 
+Test Teardown    Capture Page Screenshot
 *** Test Cases ***
 Adicionar Produto
     Click Link    xpath=//a[contains(text(),"Adicionar Produto")]
