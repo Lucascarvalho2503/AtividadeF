@@ -16,7 +16,7 @@ Editar Produto
     Click Link    xpath=//tr[td[contains(text(),"Produto Teste")]]//a[contains(text(),"Editar")]
     Input Text    id=name    Produto Teste Editado
     Click Button    xpath=//button[@type="submit" and contains(text(),"Atualizar")]
-    Page Should Contain    Produto Teste Editado
+    Wait Until Page Contains    Produto Teste Editado    timeout=5s
 
 Excluir Produto
     Click Button    xpath=//tr[td[contains(text(),"Produto Teste Editado")]]//form/button[contains(text(),"Deletar")]
