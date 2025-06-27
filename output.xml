@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.5 on win32)" generated="2025-06-26T22:59:01.425760" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot" source="C:\Users\lucas\Desktop\Atv\AtividadeF\tests\robot">
+<suite id="s1-s1" name="Fornecedores" source="C:\Users\lucas\Desktop\Atv\AtividadeF\tests\robot\fornecedores.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-06-26T22:59:01.467907" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5000/suppliers'.</msg>
+<arg>http://localhost:5000/suppliers</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-26T22:59:01.467719" elapsed="1.470132"/>
+</kw>
+<test id="s1-s1-t1" name="Adicionar Fornecedor" line="7">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:02.939025" level="INFO">Clicking link 'xpath=//a[contains(text(),"Adicionar Fornecedor")]'.</msg>
+<arg>xpath=//a[contains(text(),"Adicionar Fornecedor")]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:02.938599" elapsed="0.142004"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:03.081161" level="INFO">Typing text 'Fornecedor Teste' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>Fornecedor Teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:03.080940" elapsed="0.070945"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:03.152507" level="INFO">Clicking button 'xpath=//button[@type="submit" and contains(text(),"Salvar")]'.</msg>
+<arg>xpath=//button[@type="submit" and contains(text(),"Salvar")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:03.152257" elapsed="0.365691"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:03.543932" level="INFO">Current page contains text 'Fornecedor Teste'.</msg>
+<arg>Fornecedor Teste</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-26T22:59:03.518244" elapsed="0.025774"/>
+</kw>
+<status status="PASS" start="2025-06-26T22:59:02.938061" elapsed="0.606220"/>
+</test>
+<test id="s1-s1-t2" name="Editar Fornecedor" line="13">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:03.545271" level="INFO">Clicking link 'xpath=//tr[td[contains(text(),"Fornecedor Teste")]]//a[contains(text(),"Editar")]'.</msg>
+<arg>xpath=//tr[td[contains(text(),"Fornecedor Teste")]]//a[contains(text(),"Editar")]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:03.545100" elapsed="0.369094"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:03.914704" level="INFO">Typing text 'Fornecedor Teste Editado' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>Fornecedor Teste Editado</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:03.914499" elapsed="0.076521"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:03.991539" level="INFO">Clicking button 'xpath=//button[@type="submit" and contains(text(),"Atualizar")]'.</msg>
+<arg>xpath=//button[@type="submit" and contains(text(),"Atualizar")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:03.991329" elapsed="0.173759"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:04.192411" level="INFO">Current page contains text 'Fornecedor Teste Editado'.</msg>
+<arg>Fornecedor Teste Editado</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-26T22:59:04.165553" elapsed="0.026950"/>
+</kw>
+<status status="PASS" start="2025-06-26T22:59:03.544812" elapsed="0.647967"/>
+</test>
+<test id="s1-s1-t3" name="Excluir Fornecedor" line="19">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:04.193730" level="INFO">Clicking button 'xpath=//tr[td[contains(text(),"Fornecedor Teste Editado")]]//form/button[contains(text(),"Deletar")]'.</msg>
+<arg>xpath=//tr[td[contains(text(),"Fornecedor Teste Editado")]]//form/button[contains(text(),"Deletar")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:04.193563" elapsed="0.054155"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:04.248345" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-06-26T22:59:04.248162" elapsed="0.004792"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:04.600208" level="INFO">Current page does not contain text 'Fornecedor Teste Editado'.</msg>
+<arg>Fornecedor Teste Editado</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2025-06-26T22:59:04.253337" elapsed="0.346947"/>
+</kw>
+<status status="PASS" start="2025-06-26T22:59:04.193270" elapsed="0.407250"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-26T22:59:04.601050" elapsed="2.090369"/>
+</kw>
+<status status="PASS" start="2025-06-26T22:59:01.436527" elapsed="5.254980"/>
+</suite>
+<suite id="s1-s2" name="Produtos" source="C:\Users\lucas\Desktop\Atv\AtividadeF\tests\robot\produtos.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-06-26T22:59:06.694307" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5000/products'.</msg>
+<arg>http://localhost:5000/products</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-26T22:59:06.694167" elapsed="1.450385"/>
+</kw>
+<test id="s1-s2-t1" name="Adicionar Produto" line="7">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:08.145413" level="INFO">Clicking link 'xpath=//a[contains(text(),"Adicionar Produto")]'.</msg>
+<arg>xpath=//a[contains(text(),"Adicionar Produto")]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:08.145178" elapsed="0.152306"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:08.298090" level="INFO">Typing text 'Produto Teste' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>Produto Teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:08.297900" elapsed="0.070612"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:08.369329" level="INFO">Typing text '19.99' into text field 'id=price'.</msg>
+<arg>id=price</arg>
+<arg>19.99</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:08.369008" elapsed="0.049797"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:08.419486" level="INFO">Selecting options from selection list 'id=supplier_id' by value 1.</msg>
+<arg>id=supplier_id</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-06-26T22:59:08.419182" elapsed="0.048147"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:08.467927" level="INFO">Clicking button 'xpath=//button[@type="submit" and contains(text(),"Salvar")]'.</msg>
+<arg>xpath=//button[@type="submit" and contains(text(),"Salvar")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:08.467673" elapsed="0.373613"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:08.864079" level="INFO">Current page contains text 'Produto Teste'.</msg>
+<arg>Produto Teste</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-26T22:59:08.841760" elapsed="0.022404"/>
+</kw>
+<status status="PASS" start="2025-06-26T22:59:08.144711" elapsed="0.719721"/>
+</test>
+<test id="s1-s2-t2" name="Editar Produto" line="15">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:08.865296" level="INFO">Clicking link 'xpath=//tr[td[contains(text(),"Produto Teste")]]//a[contains(text(),"Editar")]'.</msg>
+<arg>xpath=//tr[td[contains(text(),"Produto Teste")]]//a[contains(text(),"Editar")]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:08.865028" elapsed="0.381819"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:09.247370" level="INFO">Typing text 'Produto Teste Editado' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>Produto Teste Editado</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:09.247133" elapsed="0.074563"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:09.322131" level="INFO">Clicking button 'xpath=//button[@type="submit" and contains(text(),"Atualizar")]'.</msg>
+<arg>xpath=//button[@type="submit" and contains(text(),"Atualizar")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:09.321922" elapsed="0.186200"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:09.520739" level="INFO">Current page contains text 'Produto Teste Editado'.</msg>
+<arg>Produto Teste Editado</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-26T22:59:09.508433" elapsed="0.012408"/>
+</kw>
+<status status="PASS" start="2025-06-26T22:59:08.864798" elapsed="0.656342"/>
+</test>
+<test id="s1-s2-t3" name="Excluir Produto" line="21">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:09.522357" level="INFO">Clicking button 'xpath=//tr[td[contains(text(),"Produto Teste Editado")]]//form/button[contains(text(),"Deletar")]'.</msg>
+<arg>xpath=//tr[td[contains(text(),"Produto Teste Editado")]]//form/button[contains(text(),"Deletar")]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-26T22:59:09.522123" elapsed="0.061688"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:09.584161" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-06-26T22:59:09.584039" elapsed="0.003052"/>
+</kw>
+<kw name="Page Should Not Contain" owner="SeleniumLibrary">
+<msg time="2025-06-26T22:59:09.926732" level="INFO">Current page does not contain text 'Produto Teste Editado'.</msg>
+<arg>Produto Teste Editado</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="PASS" start="2025-06-26T22:59:09.587375" elapsed="0.339426"/>
+</kw>
+<status status="PASS" start="2025-06-26T22:59:09.521554" elapsed="0.405624"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-26T22:59:09.927716" elapsed="2.085989"/>
+</kw>
+<status status="PASS" start="2025-06-26T22:59:06.692531" elapsed="5.321262"/>
+</suite>
+<status status="PASS" start="2025-06-26T22:59:01.426655" elapsed="10.587941"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot" id="s1" pass="6" fail="0" skip="0">Robot</stat>
+<stat name="Fornecedores" id="s1-s1" pass="3" fail="0" skip="0">Robot.Fornecedores</stat>
+<stat name="Produtos" id="s1-s2" pass="3" fail="0" skip="0">Robot.Produtos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
