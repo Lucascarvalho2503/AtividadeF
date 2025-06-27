@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Suite Setup    Open Browser    http://localhost:5000/suppliers    chrome    options=${ENV.ROBOT_CHROME_OPTIONS}
+Suite Setup    Open Browser    http://localhost:5000/products    chrome    options=${CHROME_OPTIONS}
 Suite Teardown    Close Browser
 
 *** Test Cases ***
