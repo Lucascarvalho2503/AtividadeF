@@ -26,7 +26,6 @@ jobs:
           pip install robotframework selenium webdriver-manager
 
       - name: Run Robot Framework tests
-        working-directory: ./AtividadeF
         run: |
           robot tests/robot/
 
