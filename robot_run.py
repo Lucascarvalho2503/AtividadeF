@@ -3,7 +3,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import tempfile
 import os
 
-os.environ['PATH'] += os.pathsep + os.path.dirname(driver_path)
 user_data_dir = tempfile.mkdtemp()
 print(f"User data dir temporário: {user_data_dir}")
 
