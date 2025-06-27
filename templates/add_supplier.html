@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Adicionar Fornecedor{% endblock %}
+{% block content %}
+    <h1>Adicionar Novo Fornecedor</h1>
+    <form method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nome do Fornecedor</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="{{ url_for('list_suppliers') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}

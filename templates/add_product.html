@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Adicionar Produto{% endblock %}
+{% block content %}
+    <h1>Adicionar Novo Produto</h1>
+    <form method="post">
+        <div class="mb-3">
+            <label for="name" class="form-label">Nome do Produto</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Preço</label>
+            <input type="number" step="0.01" class="form-control" id="price" name="price" required>
+        </div>
+        <div class="mb-3">
+            <label for="supplier_id" class="form-label">Fornecedor</label>
+            <select class="form-select" id="supplier_id" name="supplier_id" required>
+                <option value="">Selecione um fornecedor</option>
+                {% for supplier in suppliers %}
+                    <option value="{{ supplier.id }}">{{ supplier.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="{{ url_for('list_products') }}" class="btn btn-secondary">Cancelar</a>
+    </form>
+{% endblock %}
