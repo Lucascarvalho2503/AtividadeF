@@ -14,10 +14,11 @@ chrome_options_list = [
     "--disable-gpu",
 ]
 
-chrome_options_str = " ".join(chrome_options_list)
-
 driver_path = ChromeDriverManager().install()
 print(f"ChromeDriver instalado em: {driver_path}")
 
+# Passa as opções no formato literal de lista Python (com colchetes e aspas)
+chrome_options_for_robot = str(chrome_options_list)
+
 run('tests/robot/',
-    variable=[f'CHROME_OPTIONS:{chrome_options_str}'])
+    variable=[f'CHROME_OPTIONS:{chrome_options_for_robot}'])
