@@ -26,7 +26,7 @@ jobs:
 
     - name: Run Robot Framework tests
       run: |
-        run: robot tests/robot/
+        robot tests/robot/
     
     - name: Upload Robot Framework output files
       uses: actions/upload-artifact@v4
